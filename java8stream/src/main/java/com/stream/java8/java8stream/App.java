@@ -29,15 +29,38 @@ public class App
 	}
 	
 	public void ordenar() {
+		//ordena en forma ascendente
 		lista.stream().sorted().forEach(System.out::println);
 		numero.stream().sorted().forEach(System.out::println);
+		
+		//en forma descendente con exprecion lambda
+		lista.stream().sorted((x,y) -> y.compareTo(x)).forEach(System.out::println);
+		numero.stream().sorted((x,y) -> y.compareTo(x)).forEach(System.out::println);
 	}
 	
+	public void transformar() {
+		//pasar los strings a mayuscula
+		lista.stream().map(String::toUpperCase).forEach(System.out::println);
+		
+		//pasar la lista de string numero a enteros y sumarle 1
+		numero.stream().map(x -> Integer.parseInt(x)+ 1).forEach(System.out::println);
+ }
+	public void limitar() {
+		lista.stream().limit(2).forEach(System.out::println);
+		}
+	
+	public void contar() {
+		long x = lista.stream().count()	;
+		System.out.println(x);
+				}
 	
     public static void main( String[] args )
     {
         App app = new App();
-        app.filtrar();
-        app.ordenar();
+       // app.filtrar();
+      //  app.ordenar();
+       // app.transformar(); 
+       // app.limitar();
+        app.contar();
     }
 }
