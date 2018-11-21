@@ -1,4 +1,4 @@
-package com.stream.java8.java8stream;
+package GlobantBank.r;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
