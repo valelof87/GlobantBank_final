@@ -66,7 +66,7 @@ public class Bank {
 
 	public void paySalarySalaried() {// PAY SALARY- Salaried
 		for (SalariedEmployee emp : salariedEmployees) {
-			System.out.println(emp.getSalary());
+			emp.getSalary();
 		}
 	}
 
@@ -88,7 +88,6 @@ public class Bank {
 		for (SalariedEmployee emp : salariedEmployees) {
 			emp.setBaseSalary(baseSalary);
 		}
-
 		return baseSalary;
 	}
 

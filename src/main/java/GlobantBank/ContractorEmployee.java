@@ -28,8 +28,6 @@ public class ContractorEmployee extends Employee {
 		super(dni, firstName, lastName, dateOfBirth);
 	}
 
-
-
 	public int getBonusContracted() {
 		return bonusContracted;
 	}
@@ -57,9 +55,10 @@ public class ContractorEmployee extends Employee {
 
 	public double getExtraPayment() {
 		if (workHours > 40) {
-			return extraPayment = (workHours - 40) * getBonusContracted() / 100;
+			 extraPayment = (workHours - 40) * ratePerHour * bonusContracted/ 100;
+			 return extraPayment;
 		}
-		return extraPayment;
+		return 0;
 	}
 
 	public void setExtraPayment(double extraPayment) {
@@ -68,7 +67,7 @@ public class ContractorEmployee extends Employee {
 
 	@Override
 	public double getSalary() {
-		salary = workHours * ratePerHour + (workHours - 40) * 150 * bonusContracted / 100;
+		salary = workHours * ratePerHour + getExtraPayment() ;
 		return salary;
 	}
 

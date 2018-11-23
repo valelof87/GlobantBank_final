@@ -20,8 +20,14 @@ public class BranchOffice {
 	private int phoneNumber;
 
 	public BranchOffice() {
-		
 	}
+	
+	
+	public BranchOffice(int location) {
+		this.location = location;
+	}
+
+
 	public BranchOffice(int location, String adress, int phoneNumber) {
 		this.location = location;
 		this.address = adress;

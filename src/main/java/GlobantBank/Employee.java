@@ -32,6 +32,7 @@ public abstract class Employee  {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.dateOfBirth = dateOfBirth;
+		
 	}
 
 	public Employee() {
@@ -75,7 +76,6 @@ public abstract class Employee  {
 	public void setDNI(int dNI) {
 		DNI = dNI;
 	}
-
 
 
 	@Override

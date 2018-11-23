@@ -16,10 +16,6 @@ public class SalariedEmployee extends Employee {
 	protected int bonusSalaried;
 	@Column(name = "antiquity")
 	private int antiquity;
-	public int getBonusSalaried() {
-		return bonusSalaried;
-	}
-
 	@Column(name = "challenge")
 	private int challenge;
 	@Column(name = "extra_bonus")
@@ -43,7 +39,7 @@ public class SalariedEmployee extends Employee {
 	}
 
 	public int getBonussalaried() {
-		return bonusSalaried;
+		return bonusSalaried ;
 	}
 
 	public void setBonusSalaried(int bonusSalaried) {
@@ -51,7 +47,7 @@ public class SalariedEmployee extends Employee {
 	}
 
 	public int getAntiquity() {
-		return antiquity;
+		return antiquity ;
 	}
 
 	public void setAntiquity(int antiquity) {
@@ -60,7 +56,7 @@ public class SalariedEmployee extends Employee {
 	}
 
 	public int getChallenge() {
-		return challenge;
+		return  challenge *150;
 	}
 
 	public void setChallenge(int challenge) {
@@ -77,7 +73,7 @@ public class SalariedEmployee extends Employee {
 
 	@Override
 	public double getSalary() {
-		salary = baseSalary + baseSalary * antiquity * bonusSalaried / 100 + extraBonus * challenge;
+		salary = baseSalary +( baseSalary * antiquity )* bonusSalaried / 100 + extraBonus * getChallenge();
 		return salary;
 
 	}
